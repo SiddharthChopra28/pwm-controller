@@ -1,0 +1,17 @@
+{
+    "map 1": {
+        "joystick": "mouse",
+        "bj": "space",
+        "b1": "a",
+        "b2": "w",
+        "b3": "d"
+    },
+    "map 2": {
+        "joystick": "wasd",
+        "bj": "space",
+        "b1": "1",
+        "b2": "2",
+        "b3": "3"
+    }
+
+}
