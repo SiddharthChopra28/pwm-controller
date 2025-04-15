@@ -57,7 +57,9 @@ class Controller:
     
     def setport(self, baud_rate):
         for port in ports:
-            if 'Arduino' in port.description:
+            
+            if 'Arduino' in port.description or (port.vid, port.pid) == (9025, 1):
+                
                 try:
                     self.ard = serial.Serial(port.device, baudrate=baud_rate)
                     return
