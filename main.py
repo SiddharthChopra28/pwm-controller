@@ -161,8 +161,7 @@ class Controller:
         
         mouse = pynput.mouse.Controller()
         keyboard = pynput.keyboard.Controller()
-        y = 0
-        a = time.time()
+
         
         t = threading.Thread(target= self.get_serial_values)
         t.start()
@@ -275,10 +274,7 @@ class Controller:
                         keyboard.release(self.supported_keys[self.map[b]])
                 
 
-            time.sleep(0.01)
-                
-                
-        
+            time.sleep(0.03)
         
 
 if __name__ == '__main__':
