@@ -275,7 +275,7 @@ class Controller:
                         keyboard.release(self.supported_keys[self.map[b]])
                 
 
-            time.sleep(0.0001)
+            time.sleep(0.01)
                 
                 
         
