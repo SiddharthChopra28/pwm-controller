@@ -1,4 +1,4 @@
-import serial, serial.tools.list_ports
+import  serial, serial.tools.list_ports
 
 import json, sys, time, threading
 
@@ -163,11 +163,10 @@ class Controller:
         keyboard = pynput.keyboard.Controller()
 
         
-        t = threading.Thread(target= self.get_serial_values)
+        t = threading.Thread(target= self.get_serial_values, daemon=True)
         t.start()
         
         keystohold = []
-        
         while True:
             # if not self.get_serial_values():
             #     # print('[[]]')
@@ -281,4 +280,3 @@ if __name__ == '__main__':
     controller = Controller(9600)
     controller.get_map()
     controller.mainloop()
-
