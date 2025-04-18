@@ -275,7 +275,7 @@ class Controller:
                         keyboard.release(self.supported_keys[self.map[b]])
                 
 
-
+            time.sleep(0.0001)
                 
                 
         
@@ -285,3 +285,4 @@ if __name__ == '__main__':
     controller = Controller(9600)
     controller.get_map()
     controller.mainloop()
+
