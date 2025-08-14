@@ -38,7 +38,7 @@ class Controller:
                 
             self.maxmousespeed = float(settings["mouse_max_speed"])
             self.mouseFPS = int(settings["mouse_FPS"])
-            self.pwmfreq = int(settings["analogKeysFrequency"])
+            self.pwmfreq = float(settings["analogKeysFrequency"])
             
             if self.maxmousespeed <0:
                 raise(ValueError)
@@ -110,6 +110,7 @@ class Controller:
             # print(json_str)
             try:
                 datadict = json.loads(json_str)
+                print(datadict)
                 x_raw = datadict["x"] # reading of analogRead - 0 to 1023
                 y_raw = datadict["y"]
                 
@@ -273,7 +274,7 @@ class Controller:
                         keyboard.release(self.supported_keys[self.map[b]])
                 
 
-            time.sleep(0.03)
+            time.sleep(0.01)
         
 
 if __name__ == '__main__':

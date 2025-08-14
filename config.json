@@ -1,5 +1,5 @@
 {
     "mouse_max_speed": 50,
     "mouse_FPS": 120,
-    "analogKeysFrequency": 20
+    "analogKeysFrequency": 0.2
 }
